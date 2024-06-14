@@ -51,6 +51,7 @@ function Home() {
     onSubmit: (values) => {
       if (values) {
         setData((prevData) => [...prevData, values]); // setting new data to state
+        toast.success('Created Sucessfully');
         formik.resetForm()
       } else {
         toast.error('Value should be defined');
@@ -80,12 +81,12 @@ function Home() {
   <div className='main1'>
     <div className='sub-main'>
   
-<h1 className='mt-4 mb-3'>Form</h1>
+<h1 className='mt-4 mb-3 forma'>Form</h1>
  <div className='contact-form'>
       <Form onSubmit={formik.handleSubmit}>  
   <Row>
   <Col lg={6} md={12} sm={12}>
-  <Form.Label  className=' ms-4'> what is your name ?*</Form.Label>
+  <Form.Label  className=' ms-4 sub-head'>  Name </Form.Label>
                         <Form.Group className="mb-3 ms-4 w-50" controlId="formBasicEmail">
                           <Form.Control
                             type="Name"
@@ -111,7 +112,7 @@ function Home() {
 
 
 <Col lg={6} md={12} sm={12}>
-<Form.Label  className=' ms-4'>  How shall we conatact you ?*</Form.Label>
+<Form.Label  className=' ms-4 sub-head'>Phone No:</Form.Label>
                         <Form.Group className=" ms-4 w-50" controlId="formBasicEmail">
                           <Form.Control
                             type="text"
@@ -135,7 +136,7 @@ function Home() {
 </Col>
 
 <Col lg={6} md={12} sm={12}>
-<Form.Label className='mt-3 ms-4'> email </Form.Label>
+<Form.Label className='mt-3 ms-4 sub-head'> Email </Form.Label>
 <Form.Group className=" mb-3   ms-4 w-50to-bottom" controlId="formBasicEmail">
                           <Form.Control
                             type="email"
@@ -160,8 +161,8 @@ function Home() {
 </Col>
 
 
-<Col lg={12} md={12} sm={12}>
-<Form.Label className=' ms-4'> Address</Form.Label>
+<Col lg={ 12} md={12} sm={12}>
+<Form.Label className=' ms-4 sub-head'> Address</Form.Label>
                       <Form.Group
                         className="mb-3  ms-4 w-50 teaxtareachanges "
                         controlId="exampleForm.ControlTextarea1"
@@ -200,7 +201,7 @@ function Home() {
 
 
 
-  <Button className='submit-button  d-flex justify-content-center mt-4 mb-4 ms-4 w-50' type='sumbit' >Sumbit</Button>
+  <Button className='  submit-button   mt-4  ms-4' type='sumbit' >Sumbit</Button>
 
   </Form>
  </div>
@@ -210,9 +211,10 @@ function Home() {
   
 </Col>
 
-<div className='mt-4'>
+  {/* Table */}
+<div className='mt-4 '>
   
-  <TableContainer component={Paper}>
+  <TableContainer className='tabled' component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>

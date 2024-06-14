@@ -1,8 +1,37 @@
 .contact-form{
      width: 100%;
-    background-color: aqua;
+    background-color: rgb(132, 167, 167);
 }
 .form-control{
     width: 70%;
     align-items: center;
+}
+.main1{
+    background-color: #ffff
+}
+.forma{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sub-head{
+    /* display: flex;
+    align-items: center; */margin-top: 10px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+.submit-button{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; 
+    width: 50% !important;
+    
+      background-color: black!important;
+      color: #fff;
+}
+.tabled{
+    background-color: #e5b4b4!important;
+
+
 }
